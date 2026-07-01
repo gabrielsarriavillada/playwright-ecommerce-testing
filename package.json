@@ -1,0 +1,36 @@
+{
+  "name": "playwright-ecommerce-testing",
+  "version": "1.0.0",
+  "description": "Solution to the assignment received from Qualifyze for the Senior QA Engineer position",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielsarriavillada/playwright-ecommerce-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabrielsarriavillada/playwright-ecommerce-testing/issues"
+  },
+  "homepage": "https://github.com/gabrielsarriavillada/playwright-ecommerce-testing#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.4",
+    "typescript-eslint": "^8.62.1"
+  }
+}
