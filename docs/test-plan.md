@@ -77,11 +77,12 @@ Due to the assigment timebox, the following areas will not be tested in depth:
 - Screenshots where useful for bug evidence
 - Markdown for documentation
 
-## Assumptions
+## Assumptions & Acceptance Criteria
 
 - Sauce Demo behaves like a typical e-commerce application
 - Product inventory, pricing and checkout confirmation are expected to be reliable and consistent
 - The predefined users intentionally represent different risk scenarios
+- Each authenticated user is expected to have an independent shopping session, including cart contents and checkout state.
 - The main business-critical journey is:
 ```
 login -> add product -> cart -> checkout -> order confirmation
