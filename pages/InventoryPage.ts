@@ -8,7 +8,7 @@ export class InventoryPage {
     }
 
     async expectLoaded() {
-        await expect(this.page).toHaveURL("/inventory.html");
+        await expect(this.page).toHaveURL(/\/inventory\.html$/);
         await expect(this.title).toHaveText("Products");
     }
 }

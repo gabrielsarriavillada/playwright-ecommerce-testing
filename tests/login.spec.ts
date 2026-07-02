@@ -9,12 +9,19 @@ test.describe("Login", () => {
         const inventoryPage = new InventoryPage(page);
 
         await loginPage.open();
-        await loginPage.login(users.standard.username, users.standard.password);
+        await loginPage.login(users.standard);
 
         await inventoryPage.expectLoaded();
     });
 
     test("locked_out_user cannot log in", async ({ page }) => {
+        const errorMessage = "Epic sadface: Sorry, this user has been locked out.";
+        const loginPage = new LoginPage(page);
 
+        await loginPage.open();
+        await loginPage.login(users.locked);
+
+        await loginPage.expectLoginError(errorMessage);
+        await loginPage.expectLoaded();
     });
 });
