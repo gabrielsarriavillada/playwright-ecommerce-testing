@@ -1,33 +1,50 @@
-import test from "@playwright/test"
-import { LoginPage } from "../pages/LoginPage";
-import { users } from "../test-data/users";
-import { InventoryPage } from "../pages/InventoryPage";
-import { CartPage } from "../pages/CartPage";
-import { CheckoutPage } from "../pages/CheckoutPage";
+import { test } from '@playwright/test';
+import { LoginPage } from '../pages/LoginPage';
+import { users } from '../test-data/users';
+import { InventoryPage } from '../pages/InventoryPage';
+import { CartPage } from '../pages/CartPage';
+import { CheckoutPersonalDataPage } from '../pages/CheckoutPersonalDataPage';
+import { CheckoutOverviewPage } from '../pages/CheckoutOverviewPage';
+import { CheckoutCompletedPage } from '../pages/CheckoutCompletedPage';
+import { products } from '../test-data/products';
+import { checkoutData } from '../test-data/checkout';
 
-test.describe("standard_user can add products to the cart and complete checkout", () => {
-    test("standard_user can log in successfully", async ({ page }) => {
-        const loginPage = new LoginPage(page);
-        const inventoryPage = new InventoryPage(page);
-        const cartPage = new CartPage(page);
-        const checkoutPage = new CheckoutPage(page);
+test.describe('Checkout', () => {
+  test('standard_user can add two products to the cart and complete checkout', async ({
+    page,
+  }) => {
+    const loginPage = new LoginPage(page);
+    const inventoryPage = new InventoryPage(page);
+    const cartPage = new CartPage(page);
+    const checkoutPersonalDataPage = new CheckoutPersonalDataPage(page);
+    const checkoutOverviewPage = new CheckoutOverviewPage(page);
+    const checkoutCompletedPage = new CheckoutCompletedPage(page);
 
-        await loginPage.open();
-        await loginPage.login(users.standard);
+    await loginPage.open();
+    await loginPage.login(users.standard);
 
-        await inventoryPage.expectEmptyCart();
+    await inventoryPage.expectLoaded();
+    await inventoryPage.expectEmptyCart();
 
-        await inventoryPage.addProductToCart("sauce-labs-backpack");
-        await inventoryPage.expectCartItems(1);
-        
-        await inventoryPage.addProductToCart("sauce-labs-bolt-t-shirt");
-        await inventoryPage.expectCartItems(2);
+    await inventoryPage.addProductToCart(products.backpack);
+    await inventoryPage.expectCartItems(1);
 
-        await inventoryPage.openCart();
+    await inventoryPage.addProductToCart(products.boltTShirt);
+    await inventoryPage.expectCartItems(2);
 
-        await cartPage.expectLoaded();
-        await cartPage.checkout();
+    await inventoryPage.openCart();
 
-        await checkoutPage.expectLoaded();
-    });
+    await cartPage.expectLoaded();
+    await cartPage.checkout();
+
+    await checkoutPersonalDataPage.expectLoaded();
+    await checkoutPersonalDataPage.completePersonalDataForm(checkoutData);
+    await checkoutPersonalDataPage.continueCheckout();
+
+    await checkoutOverviewPage.expectLoaded();
+    await checkoutOverviewPage.finishCheckout();
+
+    await checkoutCompletedPage.expectLoaded();
+    await checkoutCompletedPage.expectOrderCompleted();
+  });
 });
