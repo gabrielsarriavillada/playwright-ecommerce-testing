@@ -5,7 +5,7 @@ The following issues were identified during exploratory testing of Sauce Demo.
 | ID                                                                                        | Title                                                               | Severity | Priority |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | -------- | -------- |
 | [BUG-001](BUG-001-Product-links-navigate-to-the-wrong-product-for-problem_user.md)        | Product links navigate to the wrong product                         | Major    | High     |
-| [BUG-002](BUG-002-Last-name-field-cannot-be-completed-for-problem_user.md)                | Last Name field cannot be completed during checkout                 | Major    | High     |
+| [BUG-002](BUG-002-Last-Name-field-cannot-be-completed-for-problem_user.md)                | Last Name field cannot be completed during checkout                 | Major    | High     |
 | [BUG-003](BUG-003-Cart-actions-are-inconsistent-for-problem_user.md)                      | Cart actions are inconsistent                                       | Major    | High     |
 | [BUG-004](BUG-004-Non-existent-product-can-be-added-to-the-cart.md)                       | Non-existent product can be added to the cart                       | Major    | Medium   |
 | [BUG-005](BUG-005-Product-sorting-displays-an-internal-error-dialog-for-error_user.md)    | Product sorting displays an internal error dialog                   | Major    | Medium   |
