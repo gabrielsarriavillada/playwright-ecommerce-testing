@@ -4,16 +4,16 @@ The following issues were identified during exploratory testing of Sauce Demo.
 
 | ID                                                                                        | Title                                                               | Severity | Priority |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | -------- | -------- |
-| [BUG-001](BUG-001-Product-links-navigate-to-the-wrong-product-for-problem_user.md)        | Product links navigate to the wrong product                         | Major | High     |
-| [BUG-002](BUG-002-Last-name-field-cannot-be-completed-for-problem_user.md)                | Last Name field cannot be completed during checkout                 | Major | High     |
-| [BUG-003](BUG-003-Cart-actions-are-inconsistent-for-problem_user.md)                      | Cart actions are inconsistent                                       | Major | High     |
-| [BUG-004](BUG-004-Non-existent-product-can-be-added-to-the-cart.md)                       | Non-existent product can be added to the cart                       | Major | Medium   |
-| [BUG-005](BUG-005-Product-sorting-displays-an-internal-error-dialog-for-error_user.md)    | Product sorting displays an internal error dialog                   | Major | Medium   |
-| [BUG-006](BUG-006-Product-sorting-does-not-work-for-problem_user.md)                      | Product sorting does not work                                       | Major | Medium   |
-| [BUG-007](BUG-007-Shopping-cart-contents-persist-across-different-authenticated-users.md) | Shopping cart contents persist across different authenticated users | Major | Medium   |
-| [BUG-008](BUG-008-User-activity-does-not-extend-the-authenticated-session.md)             | User activity does not extend the authenticated session             | Minor | Medium   |
-| [BUG-009](BUG-009-Product-images-are-incorrect-for-problem_user.md)                       | Product images are incorrect                                        | Minor | Medium   |
-| [BUG-010](BUG-010-Error-message-is-truncated-when-displayed-on-the-login-page.md)         | Login error message is truncated                                    | Minor | Low      |
+| [BUG-001](BUG-001-Product-links-navigate-to-the-wrong-product-for-problem_user.md)        | Product links navigate to the wrong product                         | Major    | High     |
+| [BUG-002](BUG-002-Last-name-field-cannot-be-completed-for-problem_user.md)                | Last Name field cannot be completed during checkout                 | Major    | High     |
+| [BUG-003](BUG-003-Cart-actions-are-inconsistent-for-problem_user.md)                      | Cart actions are inconsistent                                       | Major    | High     |
+| [BUG-004](BUG-004-Non-existent-product-can-be-added-to-the-cart.md)                       | Non-existent product can be added to the cart                       | Major    | Medium   |
+| [BUG-005](BUG-005-Product-sorting-displays-an-internal-error-dialog-for-error_user.md)    | Product sorting displays an internal error dialog                   | Major    | Medium   |
+| [BUG-006](BUG-006-Product-sorting-does-not-work-for-problem_user.md)                      | Product sorting does not work                                       | Major    | Medium   |
+| [BUG-007](BUG-007-Shopping-cart-contents-persist-across-different-authenticated-users.md) | Shopping cart contents persist across different authenticated users | Major    | Medium   |
+| [BUG-008](BUG-008-User-activity-does-not-extend-the-authenticated-session.md)             | User activity does not extend the authenticated session             | Minor    | Medium   |
+| [BUG-009](BUG-009-Product-images-are-incorrect-for-problem_user.md)                       | Product images are incorrect                                        | Minor    | Medium   |
+| [BUG-010](BUG-010-Error-message-is-truncated-when-displayed-on-the-login-page.md)         | Login error message is truncated                                    | Minor    | Low      |
 
 ## Observations
 
