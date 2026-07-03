@@ -1,12 +1,12 @@
 {
   "name": "playwright-ecommerce-testing",
   "version": "1.0.0",
-  "description": "Solution to the assignment received from Qualifyze for the Senior QA Engineer position",
-  "main": "index.js",
+  "description": "Playwright + TypeScript project demonstrating UI automation, exploratory testing documentation, and QA best practices for an e-commerce application.",
   "scripts": {
     "test": "playwright test",
-    "test:ui": "npx playwright test --ui",
+    "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
@@ -16,8 +16,14 @@
     "type": "git",
     "url": "git+https://github.com/gabrielsarriavillada/playwright-ecommerce-testing.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "typescript",
+    "qa",
+    "test-automation",
+    "e2e-testing"
+  ],
+  "author": "Gabriel Sarria Villada",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
