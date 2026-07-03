@@ -19,17 +19,17 @@ The following functionalities will be tested:
 
 ## Test Types
 
-| **Type** | **Coverage** |
-| --- | --- |
-| Manual exploratory testing | User-specific behaviors, visual anomalies, negative scenarios, edge cases |
-| UI smoke automation | Login and successful purchase flow |
-| UI regression automation | Cart and checkout happy path |
-| Negative testing | Locked user, invalid credentials, empty checkout fields |
-| Basic performance observation | Manual comparison of normal vs. performance glitch user |
+| **Type**                      | **Coverage**                                                              |
+| ----------------------------- | ------------------------------------------------------------------------- |
+| Manual exploratory testing    | User-specific behaviors, visual anomalies, negative scenarios, edge cases |
+| UI smoke automation           | Login and successful purchase flow                                        |
+| UI regression automation      | Cart and checkout happy path                                              |
+| Negative testing              | Locked user, invalid credentials, empty checkout fields                   |
+| Basic performance observation | Manual comparison of normal vs. performance glitch user                   |
 
 ## Prioritization
 
-Highest priority is given to flows that directly impact business continuity:
+Testing priorities are based on business risk and the impact on the primary e-commerce journey. Flows that prevent users from accessing the application or completing a purchase are considered the highest priority, while cosmetic and performance-related observations are investigated only after core functionality has been validated.
 
 1. **Login** - users must be able to access the application.
 2. **Checkout** - users must be able to complete a purchase.
@@ -84,6 +84,7 @@ Due to the assigment timebox, the following areas will not be tested in depth:
 - The predefined users intentionally represent different risk scenarios
 - Each authenticated user is expected to have an independent shopping session, including cart contents and checkout state.
 - The main business-critical journey is:
+
 ```
 login -> add product -> cart -> checkout -> order confirmation
 ```
