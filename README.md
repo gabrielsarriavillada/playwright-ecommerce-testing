@@ -117,6 +117,20 @@ npm run test:report
 
 ---
 
+## Continuous Integration
+
+A GitHub Actions workflow is included to automatically validate the project on every push and pull request.
+
+The pipeline performs the following quality checks:
+
+- Install project dependencies
+- Verify code formatting
+- Run ESLint
+- Execute the Playwright test suite
+- Publish the Playwright HTML report as a workflow artifact
+
+---
+
 ## Code Quality
 
 Check formatting:
